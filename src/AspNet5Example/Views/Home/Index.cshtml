@@ -1,0 +1,15 @@
+﻿@model AspNet5Example.ViewModels.DashboardViewModel
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1>Dashboard</h1>
+        </div>
+    </div>
+    <div class="row">
+        @Html.DisplayFor(m => m.WaterTemperatureTile)
+        @Html.DisplayFor(m => m.FishMotionTile)
+        @Html.DisplayFor(m => m.WaterOpacityTile)
+        @Html.DisplayFor(m => m.LightIntensityTile)
+    </div>
+</div>
