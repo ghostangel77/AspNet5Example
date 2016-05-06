@@ -8,6 +8,8 @@ using Microsoft.AspNet.Http;
 using Microsoft.Extensions.DependencyInjection;
 using AspNet5Example.Services;
 using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Configuration;
+//using AspNet5Example.Options;
 
 namespace AspNet5Example
 {
@@ -23,6 +25,13 @@ namespace AspNet5Example
         // For more information on how to configure your application, visit http://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            //var configBuilder = new ConfigurationBuilder()
+            //    .AddJsonFile("alertThresholds.js")
+            //    .AddJsonFile($"alertThresholds{_hostingEnvironment.EnvironmentName}.json", true);
+            //var config = configBuilder.Build();
+
+            //services.Configure<ThresholdOptions>(config);
+
             //services.AddTransient<ISensorDataService, SensorDataService>();
             services.AddMvc();
             services.AddSingleton<IViewModelService, ViewModelService>();
